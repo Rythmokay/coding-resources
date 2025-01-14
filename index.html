@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+    <div class="mermaid">
+        graph TD
+        classDef start fill:#22c55e,color:white,stroke:#16a34a,stroke-width:3px;
+        classDef core fill:#6366f1,color:white,stroke:#4338ca,stroke-width:2px;
+        classDef web fill:#FF8585,color:white,stroke:#FF6B6B,stroke-width:2px;
+        classDef data fill:#f43f5e,color:white,stroke:#e11d48,stroke-width:2px;
+        classDef projects fill:#f59e0b,color:white,stroke:#d97706,stroke-width:2px;
+        classDef advanced fill:#8b5cf6,color:white,stroke:#7c3aed,stroke-width:2px;
+        classDef profiles fill:#84cc16,color:white,stroke:#65a30d,stroke-width:2px;
+        classDef ai fill:#d946ef,color:white,stroke:#c026d3,stroke-width:2px;
+    
+    %% Starting Point
+    START[Start Your Journey]:::start
+    START --> CHOOSE[Choose Primary Path]:::core
+
+    %% Path Selection
+    CHOOSE --> WEB_PATH[Web Development Path]:::web
+    CHOOSE --> DATA_PATH[Data Science Path]:::data
+    CHOOSE --> AI_PATH[AI/ML Path]:::ai
+
+    %% Web Development Path
+    WEB_PATH --> WEB1[1. Frontend Fundamentals]:::web
+    WEB1 --> WEB1_SKILLS["• HTML5 (Semantic, Forms, Media)
+    • CSS3 (Flexbox, Grid, Animations)
+    • JavaScript ES6+ (Async/Await, Modules)
+    • DOM Manipulation
+    • Browser DevTools
+    • Git/GitHub
+    • Package Managers (npm/yarn)"]
+
+    WEB1 --> WEB2[2. Frontend Frameworks]:::web
+    WEB2 --> WEB2_SKILLS["• React.js (Hooks, Lifecycle)
+    • Component Patterns
+    • Routing (React Router)
+    • State Management (Context, Redux)
+    • API Integration (Axios, RTK Query)
+    • Testing (Jest, React Testing Library)
+    • Build Tools (Vite, Webpack)"]
+
+    WEB2 --> WEB3[3. Advanced Frontend]:::web
+    WEB3 --> WEB3_SKILLS["• Next.js (SSR, SSG, ISR)
+    • TypeScript (Types, Interfaces, Generics)
+    • State Management (Redux Toolkit, Zustand)
+    • Performance (Code Splitting, Lazy Loading)
+    • PWA Development
+    • Storybook
+    • UI Libraries (Material-UI, Tailwind)"]
+
+    WEB3 --> WEB4[4. Backend Fundamentals]:::web
+    WEB4 --> WEB4_SKILLS["• Node.js/Express.js
+    • RESTful API Design
+    • MongoDB/Mongoose
+    • Authentication (JWT, OAuth)
+    • Error Handling
+    • Middleware
+    • API Security (CORS, Helmet)"]
+
+    WEB4 --> WEB5[5. Advanced Backend]:::web
+    WEB5 --> WEB5_SKILLS["• Database Design Patterns
+    • Microservices Architecture
+    • GraphQL (Apollo)
+    • Redis Caching
+    • Message Queues (RabbitMQ)
+    • WebSockets
+    • API Documentation (Swagger)"]
+
+    WEB5 --> WEB6[6. DevOps & Cloud]:::web
+    WEB6 --> WEB6_SKILLS["• AWS (EC2, S3, Lambda)
+    • Docker/Kubernetes
+    • CI/CD (GitHub Actions)
+    • Monitoring (Grafana)
+    • Load Balancing
+    • Security Best Practices
+    • Cloud Architecture"]
+
+    %% Data Science Path
+    DATA_PATH --> DS1[1. Python & Statistics]:::data
+    DS1 --> DS1_SKILLS["• Python Advanced
+    • Data Structures
+    • NumPy/Pandas
+    • Probability Theory
+    • Statistical Testing
+    • Linear Algebra
+    • Git Version Control"]
+
+    DS1 --> DS2[2. Data Analysis]:::data
+    DS2 --> DS2_SKILLS["• Pandas Advanced
+    • Data Cleaning Techniques
+    • SQL (Complex Queries)
+    • ETL Pipelines
+    • Statistical Analysis
+    • Hypothesis Testing
+    • Excel/Google Sheets"]
+
+    DS2 --> DS3[3. Data Visualization]:::data
+    DS3 --> DS3_SKILLS["• Matplotlib/Seaborn
+    • Plotly/Dash
+    • Power BI
+    • Tableau
+    • D3.js Basics
+    • Dashboard Design
+    • Storytelling with Data"]
+
+    %% AI/ML Path - Enhanced
+    AI_PATH --> ML1[1. Machine Learning Foundations]:::ai
+    ML1 --> ML1_SKILLS["• Scikit-learn
+    • Supervised Learning
+    • Unsupervised Learning
+    • Feature Engineering
+    • Model Selection
+    • Cross-Validation
+    • Ensemble Methods
+    • MLflow for Experiment Tracking
+    • Optuna for Hyperparameter Tuning"]
+
+    ML1 --> ML2[2. Deep Learning & Computer Vision]:::ai
+    ML2 --> ML2_SKILLS["• TensorFlow/Keras
+    • PyTorch
+    • Neural Networks
+    • CNNs/RNNs
+    • Transfer Learning
+    • Model Optimization
+    • GPU Training
+    • Data Augmentation
+    • Model Compression"]
+
+    ML2 --> ML3[3. Natural Language Processing]:::ai
+    ML3 --> ML3_SKILLS["• Transformers
+    • BERT/GPT Models
+    • Token Classification
+    • Text Generation
+    • Fine-tuning LLMs
+    • Prompt Engineering
+    • RAG Applications
+    • Vector Databases"]
+
+    ML3 --> ML4[4. Big Data & MLOps]:::ai
+    ML4 --> ML4_SKILLS["• Distributed Computing
+    • Spark MLlib
+    • Kubernetes
+    • Model Serving
+    • Data Pipelines
+    • Model Monitoring
+    • A/B Testing
+    • Feature Stores"]
+
+    %% Projects - Web
+    WEB2 --> PROJ_W1["Project 1: Portfolio Website
+    • Responsive Design
+    • Project Showcase
+    • Contact Form
+    • Analytics Integration"]:::projects
+
+    WEB3 --> PROJ_W2["Project 2: E-commerce Platform
+    • Product Catalog
+    • Shopping Cart
+    • Payment Integration
+    • User Authentication"]:::projects
+
+    WEB4 --> PROJ_W3["Project 3: Social Platform
+    • User Profiles
+    • Real-time Chat
+    • Media Sharing
+    • Notifications"]:::projects
+
+    WEB5 --> PROJ_W4["Project 4: SaaS Dashboard
+    • Data Visualization
+    • Subscription Management
+    • Admin Panel
+    • Analytics"]:::projects
+
+    %% Projects - Data Science
+    DS2 --> PROJ_D1["Project 1: Data Analysis
+    • EDA Report
+    • Statistical Analysis
+    • Visualization
+    • Insights Presentation"]:::projects
+
+    DS3 --> PROJ_D2["Project 2: Financial Dashboard
+    • Stock Analysis
+    • Predictive Models
+    • Real-time Updates
+    • Portfolio Tracking"]:::projects
+
+    %% Projects - ML/AI
+    ML1 --> PROJ_ML1["Project 1: ML Applications
+    • Customer Churn Prediction
+      - Scikit-learn, Pandas
+      - Flask API Backend
+      - React Dashboard
+    • Credit Risk Assessment
+      - XGBoost, LightGBM
+      - FastAPI Deployment
+      - Docker Containerization"]:::projects
+
+    ML2 --> PROJ_ML2["Project 2: Computer Vision
+    • Medical Image Analysis
+      - PyTorch, MONAI
+      - ResNet, U-Net
+      - DICOM Processing
+    • Retail Analytics
+      - YOLOv8, RetinaNet
+      - TensorRT Optimization
+      - Edge Deployment"]:::projects
+
+    ML3 --> PROJ_ML3["Project 3: NLP Applications
+    • Customer Service Bot
+      - HuggingFace Transformers
+      - LangChain, LlamaIndex
+      - Vector DB (Pinecone)
+    • Document Analysis
+      - SpaCy, NLTK
+      - Sentence Transformers
+      - Neo4j Knowledge Graph"]:::projects
+
+    ML4 --> PROJ_ML4["Project 4: Production ML
+    • Real-time Recommendation
+      - Spark, Kafka
+      - Feature Store (Feast)
+      - Model Registry
+    • MLOps Pipeline
+      - KubeFlow, Argo
+      - Prometheus, Grafana
+      - CI/CD with GitHub Actions"]:::projects
+
+    %% Advanced Specializations
+    WEB6 --> ADV_WEB[Advanced Web Specializations]:::advanced
+    ADV_WEB --> AWS1["• Cloud Architecture (AWS Professional)
+    • System Design Patterns
+    • Web3/Smart Contracts
+    • Mobile Development (React Native)
+    • Performance Optimization
+    • Security Specialization
+    • Technical Architecture"]
+
+    ML4 --> ADV_AI[Advanced AI Specializations]:::advanced
+    ADV_AI --> ADV1["• Research Paper Implementation
+    • Custom AI Solutions
+    • MLOps Architecture
+    • Edge AI Development
+    • Quantum ML
+    • AI Ethics & Governance
+    • Advanced NLP"]
+
+    %% Profile Building
+    START --> PROF1[1. Essential Profiles]:::profiles
+    PROF1 --> PROF1_DETAIL["• GitHub (Daily Commits)
+    • LinkedIn (Professional Network)
+    • Portfolio (Project Showcase)
+    • Stack Overflow
+    • Kaggle Profile
+    • Dev.to Blog
+    • Resume/CV"]
+
+    PROF1 --> PROF2[2. Content Creation]:::profiles
+    PROF2 --> PROF2_DETAIL["• Technical Blog Posts
+    • YouTube Tutorials
+    • GitHub Documentation
+    • Conference Talks
+    • Code Snippets
+    • Project Walkthroughs
+    • Teaching Materials"]
+
+    %% Professional Skills
+    START --> PROF_SKILLS[Professional Development]:::core
+    PROF_SKILLS --> SKILLS_DETAIL["• Agile/Scrum
+    • Technical Writing
+    • Public Speaking
+    • Team Leadership
+    • Code Review
+    • Mentoring
+    • Time Management"]
+
+    
+
+    </div>
+</body>
+</html>
